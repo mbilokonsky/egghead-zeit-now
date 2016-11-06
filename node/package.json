@@ -7,7 +7,7 @@
     "now-start": "node index.js",
     "build": "echo 'BUILD STEP GOES HERE'",
     "now-build": "echo 'NOW BUILD STEP WENT HERE!'",
-    "deploy": "now -e GREETING=@greeting -e NAME=@name",
+    "deploy": "now -e GREETING=@greeting -e NAME=@name -e MONGO_USER=@mongouser -e MONGO_PW=@mongopw",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +23,7 @@
   "author": "@mykola",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "mongodb": "^2.2.11"
   }
 }

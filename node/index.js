@@ -3,11 +3,17 @@ var app = express();
 
 var getGreeting = require("./getGreeting");
 var getDate = require('./getDate');
+var database = require("./database");
 
 app.get('/', (req, res) => {
-  res.send(`<h1>${getGreeting()}</h1>
-    <h2>The current time is: ${getDate()}!</h2>
-    <p>This is a new paragraph of content!</p>`);
+  var greeting = getGreeting();
+  var date = getDate();
+  database.logRequest(greeting, date, (err, count) => {
+    res.send(`<h1>${greeting}</h1>
+      <h2>The current time is: ${date}!</h2>
+      <p>There have been ${count} visits to this page.</p>`);
+  });
+
 });
 
 app.listen(3000, function () {
