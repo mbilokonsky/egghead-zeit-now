@@ -1,9 +1,12 @@
 var express = require('express');
 var app = express();
 
+var getGreeting = require("./getGreeting");
+var getDate = require('./getDate');
+
 app.get('/', (req, res) => {
-  res.send(`<h1>Hello World!</h1>
-    <h2>The current time is: ${new Date().toISOString()}!</h2>
+  res.send(`<h1>${getGreeting()}</h1>
+    <h2>The current time is: ${getDate()}!</h2>
     <p>This is a new paragraph of content!</p>`);
 });
 
