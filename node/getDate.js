@@ -1,3 +1,3 @@
 module.exports = function() {
-  return new Date().toISOstring();
+  return new Date().toISOString();
 }

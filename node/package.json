@@ -7,6 +7,7 @@
     "now-start": "node index.js",
     "build": "echo 'BUILD STEP GOES HERE'",
     "now-build": "echo 'NOW BUILD STEP WENT HERE!'",
+    "deploy": "now -e GREETING=@greeting -e NAME=@name",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
