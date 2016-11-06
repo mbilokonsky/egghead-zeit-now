@@ -1,0 +1,27 @@
+{
+  "name": "zeit-now-egghead",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "now-start": "node index.js",
+    "build": "echo 'BUILD STEP GOES HERE'",
+    "now-build": "echo 'NOW BUILD STEP WENT HERE!'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbilokonsky/egghead-zeit-now.git"
+  },
+  "keywords": [
+    "zeit",
+    "now",
+    "deployment",
+    "egghead"
+  ],
+  "author": "@mykola",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
